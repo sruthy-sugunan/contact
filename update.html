@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+{%block title%}
+Update
+    {%endblock%}
+{%block content%}
+<div class="container">
+    <div class="row" style="align-items: center;">
+        <div class="col-md-12">
+            <h1 style="font-family:initial;   color:midnightblue  " class="text-center display-4">Welcome</h1>
+        </div>
+        <div class="col-md-12">
+            <h3 style="font-family:initial;color: midnightblue;"  class="text-center display-4">Contact Book</h3>
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div style="background-color:lightsteelblue; width: 600px; height: 600px;"  class="col-md-6" >
+         <center>
+            <form method="POST" action="nameup">
+                {%csrf_token%}
+                <br><br>
+
+                <label for="title">Old Name:</label>
+                <input style="height: 20; width: 30;" type="text" name="oname"  /><br><br>
+                <label for="title">New Name:</label>
+                <input style="height: 20; width: 30;" type="text" name="nname" /><br><br>
+
+                <input type="submit" class="btn btn-success" name="update" value="Update"/>
+            </form>{{msg}}
+            <form method="POST" action="numup">
+                {%csrf_token%}
+                <br><br>
+
+                <label for="title">Name:</label>
+                <input style="height: 20; width: 30;" type="text" name="name"  /><br><br>
+                <label for="title">Number:</label>
+                <input style="height: 20; width: 30;" type="text" name="nnum"   /><br><br>
+                <input type="submit" class="btn btn-success" name="update" value="Update"/>
+            </form>{{sg}}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'index' %}" <input style="width: 100px;" type="submit" class="btn btn-warning" value="Cancel"/>Back</a>
+
+
+        </center>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

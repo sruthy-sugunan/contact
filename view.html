@@ -1,0 +1,66 @@
+{%extends 'base.html'%}
+{%block title%}
+view
+    {%endblock%}
+{%block content%}
+<section id="contact-view">
+<center>
+    <div class="col-md-8" style="background-color: lightsteelblue;width: 900px;height: 900px;">
+        
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <div class="col-md-12">
+                <h1 style="font-family:initial;   color:midnightblue  " class="text-center display-4">Welcome</h1>
+            </div>
+            <div class="col-md-12">
+                <h3 style="font-family:initial;color: midnightblue;"  class="text-center display-4">Contact Book</h3>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div style="background-color: cornsilk; width: 400px;height: 400px;"  class="col-md-6">
+                <br><br>
+                <table cellpadding="0" cellspacing="0" border="3">
+                    <tr style="text-align: center;">
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    </tr>
+                    {% for contact in det %}
+
+                    <tr style="text-align: center;">
+                    <td>
+                        <span class="lead">{{contact.name}}</span>
+                       
+                       </td>
+                       <td>
+                        <span class="lead">{{contact.number}}</span>
+                       
+                       </td>
+                       </tr>
+                       {% endfor %}
+                       
+                </table><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-4">
+
+
+</div>
+<div class="col-md-4">
+
+    <a href="{% url 'index' %}"<input style="width: 100px;"  type="submit" class="btn btn-primary" value="cancel"/>Back</a>
+
+    </div>
+    <div class="col-md-4">
+
+
+    </div>
+</div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+</center>
+    
+</section>
+{%endblock%}

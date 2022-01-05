@@ -1,0 +1,73 @@
+{%extends 'base.html'%}
+{%block title%}
+Home
+    {%endblock%}
+{%block content%}
+<section id="contact-view">
+<center>
+    <div class="col-md-8" style="background-color: lightsteelblue;width: 900px;height: 900px;">
+        <form action="logout">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;<input style="width: 100px;" type="submit" class="btn btn-secondary" value="Logout"/>
+        </form>
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <div class="col-md-12">
+                <h1 style="font-family:initial;   color:midnightblue  " class="text-center display-4">Welcome</h1>
+            </div>
+            <div class="col-md-12">
+                <h3 style="font-family:initial;color: midnightblue;"  class="text-center display-4">Contact Book</h3>
+            </div>
+            <div class="row">
+                    <div class="col-md-2">
+
+                    </div>
+          
+            <div style="background-color: cornsilk; width: 1100px; height: 300px;"  class="col-md-6">
+                <br><br><br><br>
+                
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="{% url 'view'%}" <input style="width: 100px;" type="submit" class="btn btn-secondary" value="contact"/>Contacts</a>
+
+
+                    </div>
+
+                    <div class="col-md-3">
+
+
+
+         <a href="{% url 'hom'%}" <input style="width: 100px;" type="submit" class="btn btn-success" value="Add"/>Add</a>
+
+</div>
+<div class="col-md-3">
+
+    <a href="{% url 'up' %}"<input style="width: 100px;"  type="submit" class="btn btn-primary" value="Update"/>Update</a>
+
+    </div>
+    <div class="col-md-3">
+
+        <a href="{% url 'dele'%}"<input style="width: 100px;" type="submit" class="btn btn-danger" value="Delete"/>Delete</a>
+
+    </div>
+</div>
+            </div>
+    </div>
+            
+        </div>
+    </div>
+    </div>
+
+</center>
+    
+</section>
+{%endblock%}

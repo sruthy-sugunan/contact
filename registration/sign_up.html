@@ -1,0 +1,30 @@
+{%extends 'registration/base.html'%}
+{%block title%}
+Sign UP
+    {%endblock%}
+{%block content%}
+<section id="contact">
+<center>
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <div class="col-md-12">
+                <h1 style="font-family:initial;   color:midnightblue  "   class="text-center display-4">Welcome</h1>
+            </div>
+            <div class="col-md-12">
+                <h3 style="font-family:initial;   color:midnightblue  "   class="text-center display-4">Sign Up</h3>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div style="background-color:lightsteelblue; width:400px; height:800px;"  class="col-md-6" ><br><br>
+
+
+
+<form method="POST" >
+    {% csrf_token %}
+    {{form.as_p}}
+    <input style="width: 100px;"  type="submit" class="btn btn-success" value="Sign Up"/>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'login' %}"<input style="width: 100px;" type="reset" class="btn btn-warning" value="Back"/>Back</a>
+
+</form>
+</div>
+</center>
